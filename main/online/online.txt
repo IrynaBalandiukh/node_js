@@ -1,0 +1,20 @@
+
+Name: Oleh 
+Age: 28 
+City: Rivne 
+
+Name: Katya 
+Age: 26 
+City: Zaporizhia 
+
+Name: Yulia 
+Age: 24 
+City: Lviv 
+
+Name: Maria 
+Age: 25 
+City: Kyiv 
+
+Name: Nazar 
+Age: 19 
+City: Zhytomyr 

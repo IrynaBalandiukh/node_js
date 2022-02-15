@@ -1,0 +1,20 @@
+
+Name: Ira 
+Age: 26 
+City: Lviv 
+
+Name: Sasha 
+Age: 25 
+City: Ovruch 
+
+Name: Roman 
+Age: 23 
+City: Kyiv 
+
+Name: Taras 
+Age: 26 
+City: Odesa 
+
+Name: Olya 
+Age: 21 
+City: Khakiv 
