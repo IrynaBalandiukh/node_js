@@ -1,0 +1,27 @@
+const onlineUsers = [
+    {
+        name: 'Ira',
+        age: 26,
+        city: 'Lviv'
+    },
+    {
+        name: 'Sasha',
+        age: 25,
+        city: 'Ovruch'
+    },
+    {
+        name: 'Roman',
+        age: 23,
+        city: 'Kyiv'
+    },
+    {
+        name: 'Olya',
+        age: 21,
+        city: 'Khakiv'
+    },
+    {
+        name: 'Taras',
+        age: 26,
+        city: 'Odesa'
+    }
+];
