@@ -44,7 +44,12 @@ fs.readFile(path.join(__dirname,'file3.txt'), 'utf8', (err, data) => {
         })
     })
 })
-
+fs.mkdir(path.join(__dirname, 'folder'), (err) => {
+    if(err) {
+        console.log(err);
+        throw err;
+    }
+});
 fs.mkdir(path.join(__dirname, 'folder', 'users'), (err) => {
     if(err) {
         console.log(err);
