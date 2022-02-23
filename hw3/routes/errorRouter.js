@@ -1,5 +1,5 @@
 const {Router} = require('express');
-const users = require('../db/users');
+
 let error = require('../errors/errors');
 
 const errorRouter = Router();

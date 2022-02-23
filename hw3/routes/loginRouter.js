@@ -1,6 +1,5 @@
 const {Router} = require('express');
-const users = require('../db/users');
-let error = require('../errors/errors');
+
 const loginController = require('../controllers/loginController');
 const isUserValid = require('../middleware/isUserValid');
 

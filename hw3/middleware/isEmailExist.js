@@ -1,5 +1,4 @@
 const users = require('../db/users');
-let error = require('../errors/errors');
 
 function isEmailExist (req, res, next) {
     try{
