@@ -25,21 +25,27 @@ app.get('/users', ({query}, res) => {
         if (query.firstName) {
             filteredArray = filteredArray.filter(user => user.firstName === query.firstName)
         }
+
         if (query.lastName) {
             filteredArray = filteredArray.filter(user => user.lastName === query.lastName)
         }
+
         if (query.email) {
             filteredArray = filteredArray.filter(user => user.email === query.email)
         }
+
         if (query.password) {
             filteredArray = filteredArray.filter(user => user.password === query.password)
         }
+
         if (query.age) {
             filteredArray = filteredArray.filter(user => user.age === query.age)
         }
+
         if (query.city) {
             filteredArray = filteredArray.filter(user => user.city === query.city)
         }
+
         res.render('users', {users: filteredArray});
         return;
     }
@@ -53,6 +59,7 @@ app.get('/users/:userId', ({params}, res) => {
         res.redirect('/error');
         return;
     }
+
     res.render('user', {user})
 });
 

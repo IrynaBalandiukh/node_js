@@ -25,21 +25,27 @@ app.get('/users', ({query}, res) => {
         if (query.firstName) {
             filteredArray = filteredArray.filter(user => user.firstName === query.firstName)
         }
+
         if (query.lastName) {
             filteredArray = filteredArray.filter(user => user.lastName === query.lastName)
         }
+
         if (query.email) {
             filteredArray = filteredArray.filter(user => user.email === query.email)
         }
+
         if (query.password) {
             filteredArray = filteredArray.filter(user => user.password === query.password)
         }
+
         if (query.age) {
             filteredArray = filteredArray.filter(user => user.age === query.age)
         }
+
         if (query.city) {
             filteredArray = filteredArray.filter(user => user.city === query.city)
         }
+
         res.render('users', {users: filteredArray});
         return;
     }
@@ -53,21 +59,23 @@ app.get('/users/:userId', ({params}, res) => {
         res.redirect('/error');
         return;
     }
+
     res.render('user', {user})
 });
 
-app.post('/deleteUser/:userId', ({body}, res) => {
-    users = users.splice(body.id-1, 1)
-    res.redirect('/users')
+app.post('/users/:userId', ({params}, res) => {
+    users.splice(+params.userId-1, 1);
+    console.log(users);
+    res.redirect('/users');
 });
 
 app.get('/error', (req, res) => {
-    res.render('error', {error})
+    res.render('error', {error});
 });
 
 app.get('/signIn', (req, res) => {
     res.render('signIn');
-})
+});
 
 app.post('/login', ({body}, res) => {
     const userExist = users.some(user => user.email === body.email);
@@ -89,13 +97,15 @@ app.post('/signIn', ({body}, res) => {
             break;
         }
     }
+
     if (!signedUserId) {
         error = 'wrong email or password';
         res.redirect('/error');
         return;
     }
-    res.redirect(`/users/${+signedUserId}`)
-})
+
+    res.redirect(`/users/${+signedUserId}`);
+});
 
 app.use((req, res) => {
     res.render('notFound');
